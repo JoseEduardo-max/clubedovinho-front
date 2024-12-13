@@ -43,8 +43,101 @@
 
         <h2>Produtos</h2>
 
-        <section class="card card-body bg-white">
+        <section class="card card-body bg-white">        
+            <div class="container my-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="h3">Produtos - Vinhos</h1>
+                    <input type="text" class="form-control w-25" placeholder="O que você está procurando?">
+                </div>
 
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <h5 class="mb-3">Categorias</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">Tintos (50)</li>
+                            <li class="list-group-item">Brancos (30)</li>
+                            <li class="list-group-item">Rosés (20)</li>
+                            <li class="list-group-item">Espumantes (15)</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-flex justify-content-end mb-3">
+                            <select class="form-select w-25">
+                                <option value="">Ordenar por</option>
+                                <option value="price-asc">Preço: Menor para Maior</option>
+                                <option value="price-desc">Preço: Maior para Menor</option>
+                                <option value="rating">Mais Bem Avaliados</option>
+                            </select>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="product-card position-relative">
+                                    <div class="discount-badge">10% OFF</div>
+                                    <img src="https://via.placeholder.com/300x200" alt="Vinho Tinto" class="w-100">
+                                    <div class="p-3">
+                                        <h5>Vinho Tinto Reserva</h5>
+                                        <p>R$ 120,00 <span class="text-decoration-line-through text-muted">R$ 135,00</span></p>
+                                        <button class="btn btn-primary w-100">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card position-relative">
+                                    <div class="discount-badge">15% OFF</div>
+                                    <img src="https://via.placeholder.com/300x200" alt="Espumante Brut" class="w-100">
+                                    <div class="p-3">
+                                        <h5>Espumante Brut</h5>
+                                        <p>R$ 85,00 <span class="text-decoration-line-through text-muted">R$ 100,00</span></p>
+                                        <button class="btn btn-primary w-100">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card position-relative">
+                                    <div class="discount-badge">20% OFF</div>
+                                    <img src="https://via.placeholder.com/300x200" alt="Vinho Branco Seco" class="w-100">
+                                    <div class="p-3">
+                                        <h5>Vinho Branco Seco</h5>
+                                        <p>R$ 68,00 <span class="text-decoration-line-through text-muted">R$ 85,00</span></p>
+                                        <button class="btn btn-primary w-100">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card position-relative">
+                                    <img src="https://via.placeholder.com/300x200" alt="Vinho Rosé" class="w-100">
+                                    <div class="p-3">
+                                        <h5>Vinho Rosé</h5>
+                                        <p>R$ 75,00</p>
+                                        <button class="btn btn-primary w-100">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card position-relative">
+                                    <img src="https://via.placeholder.com/300x200" alt="Vinho do Porto" class="w-100">
+                                    <div class="p-3">
+                                        <h5>Vinho do Porto</h5>
+                                        <p>R$ 150,00</p>
+                                        <button class="btn btn-primary w-100">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card position-relative">
+                                    <img src="https://via.placeholder.com/300x200" alt="Vinho Malbec" class="w-100">
+                                    <div class="p-3">
+                                        <h5>Vinho Malbec</h5>
+                                        <p>R$ 95,00</p>
+                                        <button class="btn btn-primary w-100">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

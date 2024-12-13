@@ -49,3 +49,9 @@ body.login div {
     border-radius: 5px;
     font-size: 0.9rem;
 }
+
+.status-pedido { font-weight: bold; }
+        .status-pedido.faturado { color: green; }
+        .status-pedido.analise { color: orange; }
+        .status-pedido.cancelado { color: red; }
+        .table .actions button { margin-right: 5px; }

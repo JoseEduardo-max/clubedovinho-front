@@ -44,7 +44,98 @@
         <h2>Pedidos</h2>
 
         <section class="card card-body bg-white">
-
+            <div class="container my-4">
+                <h1 class="text-center">Meus pedidos</h1>
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <button class="btn btn-secondary">Duplicar pedidos selecionados</button>
+                    <input type="text" class="form-control w-25" placeholder="Digite para pesquisar um pedido">
+                    <button class="btn btn-outline-primary">Filtro avançado</button>
+                </div>
+        
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                        <label for="exibir" class="form-label">Exibir</label>
+                        <select id="exibir" class="form-select w-auto d-inline-block">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ordenar" class="form-label">Ordenar por</label>
+                        <select id="ordenar" class="form-select w-auto d-inline-block">
+                            <option>Pedido (9 - 0)</option>
+                            <option>Pedido (0 - 9)</option>
+                        </select>
+                    </div>
+                </div>
+        
+                <table class="table table-bordered table-hover">
+                    <thead class="table-primary text-center">
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>Empresa</th>
+                            <th>CPF/CNPJ</th>
+                            <th>Pedido</th>
+                            <th>Quantidade</th>
+                            <th>Valor Líquido</th>
+                            <th>Situação do Pedido</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Empresa A</td>
+                            <td>123.456.789-00</td>
+                            <td>48</td>
+                            <td>48</td>
+                            <td>R$</td>
+                            <td class="status-pedido faturado">PEDIDO FATURADO</td>
+                            <td class="actions">
+                                <button class="btn btn-outline-primary btn-sm">Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Empresa B</td>
+                            <td>987.654.321-00</td>
+                            <td>120</td>
+                            <td>120</td>
+                            <td>R$</td>
+                            <td class="status-pedido faturado">PEDIDO FATURADO</td>
+                            <td class="actions">
+                                <button class="btn btn-outline-primary btn-sm">Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Empresa C</td>
+                            <td>123.456.789-00</td>
+                            <td>48</td>
+                            <td>48</td>
+                            <td>R$</td>
+                            <td class="status-pedido analise">PEDIDO EM ANÁLISE</td>
+                            <td class="actions">
+                                <button class="btn btn-outline-primary btn-sm">Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Empresa D</td>
+                            <td>000.000.000-00</td>
+                            <td>48</td>
+                            <td>48</td>
+                            <td>R$ 1.659,40</td>
+                            <td class="status-pedido cancelado">PEDIDO CANCELADO</td>
+                            <td class="actions">
+                                <button class="btn btn-outline-primary btn-sm">Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

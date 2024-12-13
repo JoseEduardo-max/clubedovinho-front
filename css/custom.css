@@ -18,3 +18,14 @@ body.login div {
 .btn-wine:hover {
     background-color: #8a4fcc;
 }
+
+.content {
+    padding: 20px;
+}
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.progress {
+    height: 20px;
+}

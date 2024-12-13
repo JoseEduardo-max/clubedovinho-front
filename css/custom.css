@@ -55,3 +55,23 @@ body.login div {
         .status-pedido.analise { color: orange; }
         .status-pedido.cancelado { color: red; }
         .table .actions button { margin-right: 5px; }
+
+        .mistral-table .table th {
+            background-color: #f8f9fa;
+        }
+        .mistral-table .status {
+            font-weight: bold;
+        }
+        .mistral-table .status-success {
+            color: green;
+        }
+        .mistral-table .status-pending {
+            color: orange;
+        }
+        .mistral-table .status-danger {
+            color: red;
+        }
+        .mistral-table .btn-edit {
+            color: #0d6efd;
+            cursor: pointer;
+        }

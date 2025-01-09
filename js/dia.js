@@ -26,6 +26,11 @@ do {
 
 
 
-for (let ano = 1950; ano <= 2025; ano++) {
-    SELECT_ANO.innerHTML += `<option>${ano}</option>`;   
+for (let ano = 2025; ano >= 1950; ano--) {
+    if ( ano % 2 !== 0) {
+        SELECT_ANO.innerHTML += `<option>${ano}</option>`;
+    }   
 }
+
+//dever de casa
+//Mostrar os nomes dos meses ao inves dos numeros

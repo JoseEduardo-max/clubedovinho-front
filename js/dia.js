@@ -15,14 +15,17 @@ while (numero <= 31) {
     //numero++;
 }
 
-let mes = 1
+let meses = [
+    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+];
+
+let i = 0;
 
 do {
-    SELECT_MES.innerHTML += `<option>${mes}</option>`;
-
-    mes = mes + 1
-
-}while (mes <= 12); 
+    SELECT_MES.innerHTML += `<option>${meses[i]}</option>`;
+    i++;
+} while (i < meses.length);
 
 
 

@@ -14,7 +14,7 @@
                 <div class="card card-body">
                     <form action="">
                         <label for="">Número</label>
-                        <input onkeyup="preencherNumero()" id="card_numero" type="text" class="form-control form-control-lg" placeholder="0000 0000 0000 0000">
+                        <input oninput="formatarNumero()" id="card_numero" type="text" class="form-control form-control-lg" placeholder="0000 0000 0000 0000">
 
                         <label for="">Nome do Titular</label>
                         <input onkeyup="preencherTitular()" id="card_titular" type="text" class="form-control form-control-lg" placeholder="Francisco A F Silva">
@@ -47,7 +47,8 @@
 
                 <div style="height: 250px;" class="card card-body bg-dark">
 
-                    <img src="img/png-clipart-visa-visa-removebg-preview.png" width="50" alt="">
+                    <img id="bandeira_mastercard" src="img/bandeira_mastercard.png" style="display: none" width="50" alt="">
+                    <img id="bandeira_visa" src="img/bandeira_visa.png" style="display: none" width="50" alt="">
 
                     <div class="text-end mt-5">
                         <img src="img/chip-1-png.png" width="50" alt="">

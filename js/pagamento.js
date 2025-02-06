@@ -82,3 +82,4 @@ SELECT_MES.addEventListener('change', preencherValidade);
 SELECT_ANO.addEventListener('change', preencherValidade);
 
 INPUT_NUMERO.addEventListener('input', formatarNumero); 
+

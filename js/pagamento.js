@@ -32,7 +32,8 @@ for (let mes = 0; mes <= 11; mes++) {
 
 const SPAN_NUMERO = document.getElementById('resultado_numero');
 const SPAN_TITULAR = document.getElementById('resultado_titular');
-const SPAN_VALIDADE = document.getElementById('resultado_validade');    
+const SPAN_VALIDADE = document.getElementById('resultado_validade'); 
+const SPAN_CVV = document.getElementById('resultado_cvv');   
 
 function formatarNumero() {
     let numero = INPUT_NUMERO.value;
@@ -46,6 +47,7 @@ function formatarNumero() {
 
     INPUT_NUMERO.value = numero;
     SPAN_NUMERO.innerHTML = numero;
+    
 
     document.getElementById('bandeira_visa').style.display = 'none';
     document.getElementById('bandeira_mastercard').style.display = 'none';
@@ -82,4 +84,26 @@ SELECT_MES.addEventListener('change', preencherValidade);
 SELECT_ANO.addEventListener('change', preencherValidade);
 
 INPUT_NUMERO.addEventListener('input', formatarNumero); 
+INPUT_CVV.addEventListener('input', preencherCvv);
 
+
+function preencherCVV() {
+    SPAN_CVV.innerHTML = INPUT_CVV.value;
+
+    let cvv = INPUT_CVV.value.replace(/\D/g, '');
+
+    INPUT_CVV.value = cvv; 
+    SPAN_CVV.innerHTML = cvv;
+}
+
+function mostrarFrente() {
+    document.getElementById('cartao_frente').style.display = 'block';
+    document.getElementById('cartao_verso').style.display = 'none';
+
+}
+
+function mostrarVerso() {
+    document.getElementById('cartao_verso').style.display = 'block';
+    document.getElementById('cartao_frente').style.display = 'none';
+
+}

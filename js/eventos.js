@@ -1,7 +1,6 @@
-  // document.body.style.backgroundColor = 'red'; 
 
 function enviar() {
-    event.preventDefault(); //impendir o form de ser enviado
+    event.preventDefault(); 
 
     let input_nome = document.getElementById('nome');
     let input_descricao = document.getElementById('descricao');
@@ -11,24 +10,20 @@ function enviar() {
 
 
     if (input_nome.value == '') {
-        // input_nome.style.border = '1px solid red';
         input_nome.classList.remove('is-valid');
         input_nome.classList.add('is-invalid');
         erro_nome.style.display = 'block';
     } else {
-        // input_nome.style.border = '1px solid green';
         input_nome.classList.remove('is-invalid');
         input_nome.classList.add('is-valid')
         erro_nome.style.display = 'none';
     }
 
     if (input_descricao.value == '') {
-        // input_descricao.style.border = '1px solid red';
         input_descricao.classList.remove('is-invalid');
         input_descricao.classList.add('is-invalid');
         erro_descricao.style.display = 'block';
     } else {
-        // input_descricao.style.border = '1px solid green';
         input_descricao.classList.remove('is-invalid');
         input_descricao.classList.add('is-valid');
         erro_descricao.style.display = 'none';

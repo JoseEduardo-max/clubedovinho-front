@@ -5,14 +5,11 @@ const SELECT_ANO = document.getElementById('select-ano')
 let numero = 1;
 
 while (numero <= 31) {
-    //document.getElementById('select-dia').innerHTML += '<option>' + numero + '</opition>';
     SELECT_DIA.innerHTML += `<option>
         ${numero}
     </opition>`;  
 
-    numero = numero + 1;
-    //numero += 1;
-    //numero++;
+    numero = numero ++;
 }
 
 let meses = [
@@ -34,6 +31,3 @@ for (let ano = 2025; ano >= 1950; ano--) {
         SELECT_ANO.innerHTML += `<option>${ano}</option>`;
     }   
 }
-
-//dever de casa
-//Mostrar os nomes dos meses ao inves dos numeros

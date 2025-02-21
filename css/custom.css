@@ -165,3 +165,40 @@ body.login div {
 .date-select select {
     min-width: 100px;
 }
+
+/* Navbar Styles */
+.navbar {
+    background-color: #F50057; /* Cor principal */
+    border-radius: 5px;
+}
+
+.navbar a {
+    color: white !important;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f1f1f1 !important;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+}
+
+.navbar-nav .active .nav-link {
+    color: #ffcccb !important; /* Cor para item ativo */
+    font-weight: bold;
+}

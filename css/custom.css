@@ -1,114 +1,166 @@
-html, body{
+html, body {
     height: 100%;
-    background-color: #efefef
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: Arial, sans-serif;
 }
 
 body.login div {
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .btn-wine {
-    background-color: #ad63ff;
+    background-color: #F50057;
     color: white;
-    border: 1px solid #ad63ff;
+    border: 1px solid #F50057;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out;
 }
 
 .btn-wine:hover {
-    background-color: #8a4fcc;
+    background-color: #c40046;
 }
 
 .content {
     padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .card-title {
     font-size: 1.2rem;
     font-weight: bold;
+    color: #333;
 }
+
 .progress {
     height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
 }
 
 .product-card {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.2s;
+    background: #fff;
+    transition: transform 0.2s ease-in-out;
 }
+
 .product-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .discount-badge {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #f00;
-    color: #fff;
+    background-color: #F50057;
+    color: white;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.9rem;
 }
 
 .status-pedido { font-weight: bold; }
-        .status-pedido.faturado { color: green; }
-        .status-pedido.analise { color: orange; }
-        .status-pedido.cancelado { color: red; }
-        .table .actions button { margin-right: 5px; }
+.status-pedido.faturado { color: #28a745; }
+.status-pedido.analise { color: #ffc107; }
+.status-pedido.cancelado { color: #dc3545; }
 
-        .mistral-table .table th {
-            background-color: #f8f9fa;
-        }
-        .mistral-table .status {
-            font-weight: bold;
-        }
-        .mistral-table .status-success {
-            color: green;
-        }
-        .mistral-table .status-pending {
-            color: orange;
-        }
-        .mistral-table .status-danger {
-            color: red;
-        }
-        .mistral-table .btn-edit {
-            color: #0d6efd;
-            cursor: pointer;
-        }
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background: #fff;
+}
 
+.table th, .table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table thead {
+    background-color: #F50057;
+    color: white;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+.mistral-table .table th {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.mistral-table .status {
+    font-weight: bold;
+}
+
+.mistral-table .status-success {
+    color: #28a745;
+}
+
+.mistral-table .status-pending {
+    color: #ffc107;
+}
+
+.mistral-table .status-danger {
+    color: #dc3545;
+}
+
+.mistral-table .btn-edit {
+    color: #F50057;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mistral-table .btn-edit:hover {
+    color: #c40046;
+}
 
 .date-select {
     display: flex;
-    gap: 10px; 
-    justify-content: center; 
+    gap: 10px;
+    justify-content: center;
     align-items: center;
 }
 
-
 .date-select select {
-    padding: 8px 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    background-color: #f9f9f9; 
-    font-size: 14px; 
-    color: #333; 
-    outline: none; 
-    cursor: pointer; 
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-
 .date-select select:hover {
     border-color: #888;
-    background-color: #fff; 
+    background-color: #fff;
 }
-
 
 .date-select select:focus {
-    border-color: #007BFF; 
-    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); 
+    border-color: #F50057;
+    box-shadow: 0 0 4px rgba(245, 0, 87, 0.5);
 }
-
 
 .date-select select {
     min-width: 100px;

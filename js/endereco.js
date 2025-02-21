@@ -6,7 +6,12 @@ const INPUT_CIDADE = document.getElementById('cidade');
 const INPUT_UF = document.getElementById('uf');
 
 INPUT_CEP.addEventListener('blur', () => {
+    if (INPUT_CEP.value.length !== 8) {
+        return;
+    }
+
     let url = `https://viacep.com.br/ws/${INPUT_CEP.value}/json/`;
+    
 
     fetch(url)                  //busca
         .then(res => res.json())//trata o resultado
@@ -15,5 +20,7 @@ INPUT_CEP.addEventListener('blur', () => {
             INPUT_BAIRRO.value = endereco.bairro;
             INPUT_CIDADE.value = endereco.cidade;
             INPUT_UF.value = endereco.uf;
+
+            INPUT_NUMERO.focus(); 
         });
 });

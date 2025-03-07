@@ -27,7 +27,7 @@ body.login div {
 
 .content {
     padding: 20px;
-    background: #fff;
+    background: #efefef;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -166,9 +166,9 @@ body.login div {
     min-width: 100px;
 }
 
-/* Navbar Styles */
+
 .navbar {
-    background-color: #F50057; /* Cor principal */
+    background-color: #F50057; 
     border-radius: 5px;
 }
 

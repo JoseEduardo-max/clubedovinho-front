@@ -29,11 +29,14 @@ fetch('http://localhost:3000/products')
     });
 
     function excluir(id) {
+        if (false === confirm('Confirma ou sem firma?')) {
+            return;
+        }
+
+
         fetch(`http://localhost:3000/products/${id}`, {
             method: 'DELETE'
         });
-
-        alert("Produto excluido");
 
         location.href = "";
     }

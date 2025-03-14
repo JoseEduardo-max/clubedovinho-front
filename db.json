@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Quinta do Morgado",
+      "price": 10.89,
+      "category": "Vinho Suave",
+      "image": "https://cdn.dooca.store/197/products/vinho-quinta-do-morgado-tinto-suave-750-ml.jpg?v=1665008400",
+      "quantity": 12
+    },
+    {
+        "id": "2",
+        "name": "Quinta do Morgado",
+        "price": 10.89,
+        "category": "Vinho Suave",
+        "image": "https://cdn.dooca.store/197/products/vinho-quinta-do-morgado-tinto-suave-750-ml.jpg?v=1665008400",
+        "quantity": 12
+    },
+    {
+        "id": "3",
+        "name": "Quinta do Morgado",
+        "price": 10.89,
+        "category": "Vinho Suave",
+        "image": "https://cdn.dooca.store/197/products/vinho-quinta-do-morgado-tinto-suave-750-ml.jpg?v=1665008400",
+        "quantity": 12
+    },
+    {
+      "id": "4",
+      "name": "Quinta do Morgado",
+      "price": 10.89,
+      "category": "Vinho Suave",
+      "image": "https://cdn.dooca.store/197/products/vinho-quinta-do-morgado-tinto-suave-750-ml.jpg?v=1665008400",
+      "quantity": 12
+    },
+    {
+      "id": "5",
+      "name": "Quinta do Morgado",
+      "price": 10.89,
+      "category": "Vinho Suave",
+      "image": "https://cdn.dooca.store/197/products/vinho-quinta-do-morgado-tinto-suave-750-ml.jpg?v=1665008400",
+      "quantity": 12
+    }
+  ]
+}

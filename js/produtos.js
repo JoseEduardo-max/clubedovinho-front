@@ -1,8 +1,13 @@
 const TABLE = document.getElementById('table-products');
 
-fetch('http://localhost:3000/products')
+listar()
+
+function listar() {
+    fetch('http://localhost:3000/products')
     .then(res => res.json())
     .then(dados => {
+        TABLE.innerHTML = '';
+
         dados.forEach(product => {
             TABLE.innerHTML += `
                 <tr>
@@ -18,7 +23,7 @@ fetch('http://localhost:3000/products')
                         <a href="#" class="btn btn-outline-warning btn-sm">
                             Editar
                         </a>
-                        <a href="#" onclick="excluir(${product.id})" class="btn btn-outline-danger btn-sm">
+                        <a href="#" onclick="excluir('${product.id}')" class="btn btn-outline-danger btn-sm">
                             Excluir
                         </a>
                     </td>
@@ -27,8 +32,9 @@ fetch('http://localhost:3000/products')
         
         });
     });
+}
 
-    function excluir(id) {
+function excluir(id) {
         if (false === confirm('Confirma ou sem firma?')) {
             return;
         }
@@ -38,8 +44,9 @@ fetch('http://localhost:3000/products')
             method: 'DELETE'
         });
 
-        location.href = "";
-    }
+        alert('Excluido com sucesso');
+        listar();
+}
 
 
 
@@ -48,6 +55,29 @@ function openModal(imagem, nome) {
     document.getElementById("imageModalLabel").innerText = nome; 
 }
 
+function addProduct() {
+event.preventDefault();
+
+let dados = {
+    name: document.getElementById('name').value,
+    price:document.getElementById('price').value,
+    category:document.getElementById('category').value,
+    quantity:document.getElementById('quantity').value,
+    image:document.getElementById('image').value,
+};
+
+fetch('http://localhost:3000/products', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(dados)
+});
+
+    document.getElementById('form').reset();
+    alert('Pronto, cadastrado com sucesso');
+    listar();
+}
 
 
 

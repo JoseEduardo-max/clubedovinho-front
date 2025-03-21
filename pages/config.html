@@ -38,7 +38,12 @@
     </nav>
     <hr>
 
-    <h2>Configurações</h2>
+    <div class="text-end mb-3">
+        <button onclick="changeLanguage('en')" class="btn btn-outline-primary">🇺🇸 Inglês</button>
+        <button onclick="changeLanguage('pt')" class="btn btn-outline-primary">🇧🇷 Português</button>
+    </div>
+
+    <h2 data-i18n="settings">Configurações</h2>
 
     <section class="card card-body">
 
@@ -90,7 +95,7 @@
 
         <div class="form-check form-switch">
             <input onchange="habilitarDarkmode(this)" class="form-check-input" type="checkbox" role="switch" id="darkmode">
-            <label class="form-check-label" for="darkmode">Habilitar</label>
+            <label class="form-check-label" data-i18n="darkmode_label" for="darkmode">Habilitar</label>
           </div>
 
 

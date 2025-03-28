@@ -1,4 +1,4 @@
-import i18next from "i18next"; // Importa o i18next
+import i18next from "i18next"; 
 
 i18next.init({
     lng: localStorage.getItem("language") || "pt",

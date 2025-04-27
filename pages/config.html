@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Config</title>
+    <title data-i18n="config_title">Configurações</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -14,95 +14,91 @@
 <body class="container">
     <hr>
     <nav class="text-end">
-        <a href="dashboard.html" class="btn btn-dark">
+        <a href="dashboard.html" class="btn btn-dark" data-i18n="nav_dashboard">
             Dashboard
         </a>
-        <a href="categorias.html" class="btn btn-outline-dark">
+        <a href="categorias.html" class="btn btn-outline-dark" data-i18n="nav_categorias">
             Categorias
         </a>
-        <a href="clientes.html" class="btn btn-outline-dark">
+        <a href="clientes.html" class="btn btn-outline-dark" data-i18n="nav_clientes">
             Clientes
         </a>
-        <a href="paises.html" class="btn btn-outline-dark">
+        <a href="paises.html" class="btn btn-outline-dark" data-i18n="nav_paises">
             Países
         </a>
-        <a href="produtos.html" class="btn btn-outline-dark">
+        <a href="produtos.html" class="btn btn-outline-dark" data-i18n="nav_produtos">
             Produtos
         </a>
-        <a href="pedidos.html" class="btn btn-outline-dark">
+        <a href="pedidos.html" class="btn btn-outline-dark" data-i18n="nav_pedidos">
             Pedidos
         </a>
-        <a href="../index.html" class="btn btn-outline-danger">
+        <a href="../index.html" class="btn btn-outline-danger" data-i18n="nav_sair">
             Sair
         </a>
     </nav>
     <hr>
 
     <div class="text-end mb-3">
-        <button onclick="changeLanguage('en')" class="btn btn-outline-primary">🇺🇸 Inglês</button>
-        <button onclick="changeLanguage('pt')" class="btn btn-outline-primary">🇧🇷 Português</button>
+        <button onclick="changeLanguage('en')" class="btn btn-outline-primary">🇺🇸 <span data-i18n="language_english">Inglês</span></button>
+        <button onclick="changeLanguage('pt')" class="btn btn-outline-primary">🇧🇷 <span data-i18n="language_portuguese">Português</span></button>
     </div>
 
     <h2 data-i18n="settings">Configurações</h2>
 
     <section class="card card-body">
 
-        <h4>Modulos</h4>
+        <h4 data-i18n="modules_title">Módulos</h4>
 
         <div class="alert alert-info">
-            <strong>Dica:</strong>
-            Selecione apenas os modulos que você quer
+            <strong data-i18n="tip_strong">Dica:</strong>
+            <span data-i18n="tip_select_modules">Selecione apenas os módulos que você quer</span>
         </div>
 
         <div class="row">
             <div class="col">
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="modulo_categoria" onchange="marcado(this)">
-                    <label class="form-check-label" for="modulo_categoria">Categorias</label>
+                    <label class="form-check-label" for="modulo_categoria" data-i18n="module_categorias">Categorias</label>
                 </div>
 
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="modulo_clientes" onchange="marcado(this)">
-                    <label class="form-check-label" for="modulo_clientes">Clientes</label>
+                    <label class="form-check-label" for="modulo_clientes" data-i18n="module_clientes">Clientes</label>
                 </div>
 
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="modulo_paises" onchange="marcado(this)">
-                    <label class="form-check-label" for="modulo_paises">Países</label>
+                    <label class="form-check-label" for="modulo_paises" data-i18n="module_paises">Países</label>
                 </div>
 
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="modulo_produtos" onchange="marcado(this)">
-                    <label class="form-check-label" for="modulo_produtos">Produtos</label>
+                    <label class="form-check-label" for="modulo_produtos" data-i18n="module_produtos">Produtos</label>
                 </div>
 
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="modulo_pedidos" onchange="marcado(this)">
-                    <label class="form-check-label" for="modulo_pedidos">Pedidos</label>
+                    <label class="form-check-label" for="modulo_pedidos" data-i18n="module_pedidos">Pedidos</label>
                 </div>
             </div>
             <div class="col">
                 <div class="alert alert-secondary">
                     <span id="quantidade_modulo" class="fs-1">0</span> 
-                    módulos(s)
+                    <span data-i18n="modules_text">módulo(s)</span>
                 </div>
             </div>
         </div>
 
         <hr>
 
-        <h4>Darkmode</h4>
+        <h4 data-i18n="darkmode_title">Modo Escuro</h4>
 
         <div class="form-check form-switch">
             <input onchange="habilitarDarkmode(this)" class="form-check-input" type="checkbox" role="switch" id="darkmode">
             <label class="form-check-label" data-i18n="darkmode_label" for="darkmode">Habilitar</label>
-          </div>
-
+        </div>
 
     </section>
-
-     
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

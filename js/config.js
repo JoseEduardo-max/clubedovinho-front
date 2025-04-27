@@ -12,11 +12,10 @@ function marcado(evento) {
     quantidade.innerHTML = qtd;
 }
 
-// Função para habilitar ou desabilitar o Dark Mode
 function habilitarDarkmode(event) {
     if (event.checked === false) {
         localStorage.removeItem('darkmode');
-        location.href = "";
+        location.href = "";  
         return;
     }
 
@@ -27,7 +26,6 @@ function habilitarDarkmode(event) {
     `;
 }
 
-// Aplicar Dark Mode ao carregar a página
 if (localStorage.getItem('darkmode') === 'sim') {
     document.getElementsByTagName("head")[0].innerHTML += `
         <link id="darkmode-style" rel="stylesheet" href="../css/darkmode.css">
@@ -35,16 +33,14 @@ if (localStorage.getItem('darkmode') === 'sim') {
     document.getElementById('darkmode').checked = true;
 }
 
-// ------ Código de Mudança de Idioma ------
+// Função para trocar o idioma e atualizar a página
 function changeLanguage(lang) {
-    localStorage.setItem("language", lang);
-    location.reload(); // Recarrega a página para aplicar o novo idioma
+    localStorage.setItem("language", lang); 
+    carregarIdioma(lang); 
 }
 
-// Aplicar idioma salvo ao carregar a página
-document.addEventListener("DOMContentLoaded", function () {
-    const lang = localStorage.getItem("language") || "pt";
-    
+// Função para carregar as traduções no idioma escolhido
+function carregarIdioma(lang) {
     fetch(`../locales/${lang}.json`)
         .then(response => response.json())
         .then(translations => {
@@ -52,4 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 el.innerText = translations[el.dataset.i18n] || el.innerText;
             });
         });
+}
+
+// Aplicar idioma salvo ao carregar a página
+document.addEventListener("DOMContentLoaded", function () {
+    const lang = localStorage.getItem("language") || "pt"; 
+    carregarIdioma(lang); 
 });
